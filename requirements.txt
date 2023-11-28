@@ -5,3 +5,4 @@ dash-renderer
 plotly
 pandas
 scikit-learn
+seaborn
