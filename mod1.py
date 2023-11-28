@@ -164,6 +164,19 @@ if selected_country and uploaded_json and uploaded_csv:
             colorscale="Viridis"
         ))
         st.plotly_chart(fig_corr)
+	    
+        url = st.text_input("Enter URL:")
+        button_clicked = st.button("Run Dash App")
+
+        # Check if the button is clicked
+        if button_clicked:
+                    # Check if URL is provided
+                    if url:
+                        # Run the Dash app with the specified URL
+                        run_dash_app(url)
+                    else:
+                        st.warning("Please enter a valid URL.")	
+	
 	
         
 
